@@ -1,17 +1,24 @@
 import { screen, render } from '@testing-library/react';
-import App from './App';
 import { vi } from 'vitest';
+import App from './App';
 
+// helper functions
 function sum(x: number, y: number): number {
   return x + y;
 }
 
-vi.mock('Gallery6', () => ({
-  default: () => {
-    return <div>{'Mock'}</div>;
-  },
+// mocks
+vi.mock('@/components/ui/button', () => ({
+  Button: (props: any) => <button {...props} />,
+  buttonVariants: vi.fn(),
+}));
+vi.mock('@/components/ui/carousel', () => ({
+  Carousel: (props: any) => <div {...props} />,
+  CarouselContent: (props: any) => <div {...props} />,
+  CarouselItem: (props: any) => <div {...props} />,
 }));
 
+// tests of testing
 describe('Testing compilation', () => {
   it('compile test', () => {
     expect(1).toBe(1);
@@ -22,9 +29,12 @@ describe('Testing compilation', () => {
   });
 });
 
+// app tests
 describe('App tests', () => {
-  it('renders the heading', () => {
+  it('renders app heading', () => {
     render(<App />);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 1, name: 'Gallery' })
+    ).toBeInTheDocument();
   });
 });
