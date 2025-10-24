@@ -1,10 +1,11 @@
-import { Gallery6 } from './components/Gallery6';
+import Header from './components/header';
+import Content from './components/content';
 
 function App() {
   return (
-    <div>
-      <h1>Gallery</h1>
-      <Gallery6 />
+    <div className="main_container h-screen flex flex-col">
+      <Header />
+      <Content />
     </div>
   );
 }

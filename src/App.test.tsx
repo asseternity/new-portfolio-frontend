@@ -12,11 +12,6 @@ vi.mock('@/components/ui/button', () => ({
   Button: (props: any) => <button {...props} />,
   buttonVariants: vi.fn(),
 }));
-vi.mock('@/components/ui/carousel', () => ({
-  Carousel: (props: any) => <div {...props} />,
-  CarouselContent: (props: any) => <div {...props} />,
-  CarouselItem: (props: any) => <div {...props} />,
-}));
 
 // tests of testing
 describe('Testing compilation', () => {
@@ -34,7 +29,7 @@ describe('App tests', () => {
   it('renders app heading', () => {
     render(<App />);
     expect(
-      screen.getByRole('heading', { level: 1, name: 'Gallery' })
+      screen.getByRole('heading', { level: 1, name: 'Asset Nakupov' })
     ).toBeInTheDocument();
   });
 });

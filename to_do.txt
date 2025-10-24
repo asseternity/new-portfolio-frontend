@@ -1,5 +1,5 @@
-[_] big pages for each project with tags for technologies used so that i ca just link the section
-[_] 
+[_] profile page for each project with tags for technologies used so that i can just link the section
+[_] start "resizable" with stack projects on the very right for mobile (with a popup instruction to grab left) 
 [_] 
 [_] 
 [_] 
