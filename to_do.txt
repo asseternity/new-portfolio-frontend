@@ -1,4 +1,4 @@
-[_] start "resizable" with stack projects on the very right for mobile (with a popup instruction to grab left)
+[v] start "resizable" with stack projects on the very right for mobile (with a popup instruction to grab left)
 [_] profile page for each project with tags for technologies used so that i can just link the section
 [_] bring back the dragon game but animate its opening and closing
 [_] responsive
