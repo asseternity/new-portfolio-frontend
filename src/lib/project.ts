@@ -2,7 +2,8 @@ export type Project = {
   name: string;
   description: string;
   frontendLink: string;
-  outsideLink: string;
+  demoLink: string;
+  githubLink: string;
   screenshotPath?: string;
   tags: string[];
 };

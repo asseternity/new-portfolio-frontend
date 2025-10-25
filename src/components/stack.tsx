@@ -33,6 +33,10 @@ import {
 } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
 
+type FunctionProps = {
+  callback: Function;
+};
+
 function Item({
   name,
   Icon,
@@ -66,7 +70,7 @@ function Item({
   );
 }
 
-export default function Stack() {
+export default function Stack({ callback }: FunctionProps) {
   const allNames = [
     'TypeScript',
     'JavaScript',
@@ -350,7 +354,7 @@ export default function Stack() {
       <h2 className="text-xl mx-5">Portfolio Projects</h2>
       <div className="projects w-full p-5 flex flex-col gap-2">
         {shownProjects?.map((x) => (
-          <ProjectItem project={x} key={x.name} />
+          <ProjectItem project={x} callback={callback} key={x.name} />
         ))}
       </div>
     </TooltipProvider>

@@ -8,7 +8,11 @@ import Stack from './stack';
 import About from './about';
 import { useEffect, useRef } from 'react';
 
-function Content() {
+type FunctionProps = {
+  callback: Function;
+};
+
+function Content({ callback }: FunctionProps) {
   const shown = useRef(false);
 
   useEffect(() => {
@@ -26,7 +30,7 @@ function Content() {
     <div className="content flex-1 min-h-0 p-5">
       <ResizablePanelGroup direction="horizontal" className="h-full">
         <ResizablePanel className="!overflow-y-auto" defaultSize={100}>
-          <Stack />
+          <Stack callback={callback} />
         </ResizablePanel>
         <ResizableHandle withHandle className="mx-3" />
         <ResizablePanel className="!overflow-y-auto">

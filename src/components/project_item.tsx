@@ -10,9 +10,10 @@ import {
 
 type ProjectProps = {
   project: Project;
+  callback: Function;
 };
 
-export function ProjectItem({ project }: ProjectProps) {
+export function ProjectItem({ project, callback }: ProjectProps) {
   return (
     <div className="flex-1">
       <Item variant="outline">
@@ -21,7 +22,7 @@ export function ProjectItem({ project }: ProjectProps) {
           <ItemDescription>{project.description}</ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" onClick={() => callback(project)}>
             Read more
           </Button>
         </ItemActions>
