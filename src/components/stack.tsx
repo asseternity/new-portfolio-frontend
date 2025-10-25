@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Tooltip,
   TooltipContent,
@@ -7,7 +7,9 @@ import {
 } from './ui/tooltip';
 import { Separator } from '@/components/ui/separator';
 import { Button } from './ui/button';
-
+import { ProjectItem } from './project_item';
+import { projects } from '@/lib/projects';
+import type { Project } from '@/lib/project';
 import {
   SiTypescript,
   SiJavascript,
@@ -64,7 +66,7 @@ function Item({
   );
 }
 
-export default function StackProjects() {
+export default function Stack() {
   const allNames = [
     'TypeScript',
     'JavaScript',
@@ -101,6 +103,19 @@ export default function StackProjects() {
     Array.from(allNames)
   );
 
+  const [shownProjects, setShownProjects] = useState<Project[]>();
+
+  useEffect(() => {
+    const newProjects: Project[] = projects.filter((x) => {
+      return x.tags?.some((tag) =>
+        activatedIcons.some((name) =>
+          name.toLowerCase().includes(tag.toLowerCase())
+        )
+      );
+    });
+    setShownProjects(newProjects);
+  }, [activatedIcons]);
+
   const toggle = (name: string) => {
     setActivatedIcons((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
@@ -120,12 +135,17 @@ export default function StackProjects() {
 
   return (
     <TooltipProvider>
-      <div className="p-6 space-y-4 [--label:9rem] sm:[--label:12rem] md:[--label:14rem] lg:[--label:16rem]">
+      <div className="flex flex-row">
+        <h2 className="text-xl mx-5">Skills</h2>
         <Button size="sm" className="h-7 px-2 text-xs" onClick={toggleAll}>
           {activatedIcons.length > 0 ? 'Hide all' : 'Select all'}
         </Button>
+      </div>
+      <p className="text-xs text-gray-500 mt-2 mx-5">
+        Click to filter the projects
+      </p>
+      <div className="p-6 space-y-4 [--label:7rem] sm:[--label:9rem] md:[--label:11rem] lg:[--label:13rem]">
         <Separator orientation="horizontal" />
-
         <div className={rowCls}>
           <h2 className="text-md md:text-lg font-semibold tracking-tight">
             Languages & Runtime
@@ -326,6 +346,12 @@ export default function StackProjects() {
             />
           </div>
         </div>
+      </div>
+      <h2 className="text-xl mx-5">Portfolio Projects</h2>
+      <div className="projects w-full p-5 flex flex-col gap-2">
+        {shownProjects?.map((x) => (
+          <ProjectItem project={x} key={x.name} />
+        ))}
       </div>
     </TooltipProvider>
   );

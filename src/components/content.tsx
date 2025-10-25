@@ -3,15 +3,15 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from '@/components/ui/resizable';
-import StackProjects from './stack_projects';
+import Stack from './stack';
 import About from './about';
 
 function Content() {
   return (
     <div className="content flex-1 min-h-0 p-5">
       <ResizablePanelGroup direction="horizontal" className="h-full">
-        <ResizablePanel className="!overflow-y-auto">
-          <StackProjects />
+        <ResizablePanel className="!overflow-y-auto" defaultSize={90}>
+          <Stack />
         </ResizablePanel>
         <ResizableHandle />
         <ResizablePanel className="!overflow-y-auto">
