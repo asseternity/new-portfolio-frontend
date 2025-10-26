@@ -1,9 +1,11 @@
 [v] start "resizable" with stack projects on the very right for mobile (with a popup instruction to grab left)
 [v] profile page for each project with tags for technologies used so that i can just link the section
 [v] finalize profile page
-[_] bring back the dragon game but animate its opening and closing
-[_] final content for projects and about
+[v] bring back the dragon game but animate its opening and closing
+[_] push to GH pages to check mobile
 [_] responsive
 [_] finalize
-[_] switch backend to TS
+[_] final content for projects and about
 [_] hook up metrics
+[_] push to assetn.dev
+[_] switch backend to TS
