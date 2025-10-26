@@ -3,6 +3,7 @@
 [v] finalize profile page
 [v] bring back the dragon game but animate its opening and closing
 [_] push to GH pages to check mobile
+[_] animate closing and opening of the dragon game
 [_] responsive
 [_] finalize
 [_] final content for projects and about
