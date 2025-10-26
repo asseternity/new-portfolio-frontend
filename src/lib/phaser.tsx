@@ -9,6 +9,11 @@ import bolt2 from '/bolt2.png';
 import bolt3 from '/bolt3.png';
 import bolt4 from '/bolt4.png';
 
+type Props = {
+  gameHidden: boolean;
+  callback: Function;
+};
+
 // ✅ Define your scene interface
 interface CustomScene extends Phaser.Scene {
   player: Phaser.Physics.Arcade.Sprite;
@@ -21,12 +26,7 @@ interface CustomScene extends Phaser.Scene {
   sKey: Phaser.Input.Keyboard.Key;
 }
 
-type FunctionProps = {
-  onHideGame: () => void;
-};
-
-export default function PhaserGame({ onHideGame }: FunctionProps) {
-  const [gameHidden, setGameHidden] = useState(false);
+export default function PhaserGame({ gameHidden, callback }: Props) {
   const [gameStarted, setGameStarted] = useState(false);
   const [finalScore, setFinalScore] = useState(-1);
   const [highScores, setHighScores] = useState<any[]>([]);
@@ -338,8 +338,6 @@ export default function PhaserGame({ onHideGame }: FunctionProps) {
     }
   };
 
-  if (gameHidden) return null;
-
   return (
     <div
       ref={gameContainerRef}
@@ -350,7 +348,11 @@ export default function PhaserGame({ onHideGame }: FunctionProps) {
         width: '100vw',
         height: '200px',
         zIndex: 9999,
+        opacity: gameHidden ? '0' : '1',
+        transform: gameHidden ? 'translate(0, -100%)' : 'translate(0, 0)',
         background: 'rgba(0, 0, 0, 0.85)',
+        pointerEvents: gameHidden ? 'none' : 'all',
+        transition: 'opacity 0.4s ease, transform 0.4s ease',
       }}
     >
       {!gameStarted && (
@@ -359,8 +361,7 @@ export default function PhaserGame({ onHideGame }: FunctionProps) {
           highScoresArray={highScores}
           startGameCallback={handleStart}
           hideGameCallback={() => {
-            setGameHidden(true);
-            onHideGame();
+            callback(true);
           }}
           nameWriting={nameWriting}
         />

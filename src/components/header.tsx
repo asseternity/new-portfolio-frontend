@@ -1,14 +1,15 @@
+import { useState } from 'react';
 import { CiLinkedin } from 'react-icons/ci';
 import { FaGithub } from 'react-icons/fa';
 import { PiReadCvLogo } from 'react-icons/pi';
 import { MdOutlineMail } from 'react-icons/md';
 import { Button } from './ui/button';
 import dragon_icon from '/dragon-svgrepo-com.svg';
-import { useState } from 'react';
 import PhaserGame from '@/lib/phaser';
 
 function Header() {
-  const [showGame, setShowGame] = useState<boolean>(false);
+  const [gameHidden, setGameHidden] = useState<boolean>(true);
+
   return (
     <div className="header w-full flex flex-col justify-center items-center gap-3 px-5 text-center">
       <h1 className="text-4xl">Asset Nakupov</h1>
@@ -37,11 +38,13 @@ function Header() {
         </Button>
         <Button
           className="h-9 w-9 p-1 bg-green-800"
-          onClick={() => setShowGame(true)}
+          onClick={() => {
+            setGameHidden(false);
+          }}
         >
           <img src={dragon_icon} className="w-full h-full" />
         </Button>
-        {showGame && <PhaserGame onHideGame={() => setShowGame(false)} />}
+        <PhaserGame gameHidden={gameHidden} callback={setGameHidden} />
       </div>
     </div>
   );
