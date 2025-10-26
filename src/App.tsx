@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Header from './components/header';
 import Content from './components/content';
 import { ProjectProfile } from './components/profile';
-import { projects } from './lib/projects';
 import type { Project } from './lib/project';
 
 function App() {

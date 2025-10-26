@@ -7,8 +7,8 @@ type ProjectProps = {
 
 const ProjectProfile = ({ project }: ProjectProps) => {
   return (
-    <section>
-      <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+    <section className="flex-1 p-5">
+      <div className="container w-full h-full grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="mx-auto flex flex-col items-center text-center md:ml-auto lg:max-w-3xl lg:items-start lg:text-left">
           <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl xl:text-7xl">
             {project.name}
@@ -25,9 +25,13 @@ const ProjectProfile = ({ project }: ProjectProps) => {
             </Button>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex h-full w-full">
           <img
-            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
+            src={
+              project.screenshotPath
+                ? project.screenshotPath
+                : 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg'
+            }
             alt="placeholder hero"
             className="max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]"
           />
