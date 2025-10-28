@@ -19,7 +19,7 @@ export function ProjectItem({ project, callback }: ProjectProps) {
       <Item variant="outline" className="border-black">
         <ItemContent>
           <ItemTitle>{project.name}</ItemTitle>
-          <ItemDescription>{project.description}</ItemDescription>
+          <ItemDescription>{project.briefDescription}</ItemDescription>
         </ItemContent>
         <ItemActions>
           <Button

@@ -4,7 +4,9 @@ import type { Project } from './project';
 export const projects: Project[] = [
   {
     name: 'C# Project',
-    description: 'Test test test test',
+    briefDescription: 'Test test test test',
+    fullDescription:
+      'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.',
     frontendLink: 'N/A',
     githubLink: 'N/A',
     demoLink: 'N/A',
@@ -13,7 +15,9 @@ export const projects: Project[] = [
   },
   {
     name: 'Python Project',
-    description: 'Test test test test',
+    briefDescription: 'Test test test test',
+    fullDescription:
+      'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.',
     frontendLink: 'N/A',
     githubLink: 'N/A',
     demoLink: 'N/A',
@@ -22,7 +26,9 @@ export const projects: Project[] = [
   },
   {
     name: 'TypeScript Project',
-    description: 'Test test test test',
+    briefDescription: 'Test test test test',
+    fullDescription:
+      'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.',
     frontendLink: 'N/A',
     githubLink: 'N/A',
     demoLink: 'N/A',
@@ -31,7 +37,9 @@ export const projects: Project[] = [
   },
   {
     name: 'C# and Python Project',
-    description: 'Test test test test',
+    briefDescription: 'Test test test test',
+    fullDescription:
+      'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.',
     frontendLink: 'N/A',
     githubLink: 'N/A',
     demoLink: 'N/A',
@@ -40,7 +48,9 @@ export const projects: Project[] = [
   },
   {
     name: 'TypeScript and Python Project',
-    description: 'Test test test test',
+    briefDescription: 'Test test test test',
+    fullDescription:
+      'Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test.',
     frontendLink: 'N/A',
     githubLink: 'N/A',
     demoLink: 'N/A',

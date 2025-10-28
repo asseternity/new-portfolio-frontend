@@ -17,7 +17,9 @@ function App() {
     <div className="main_container h-screen flex flex-col">
       <Header />
       {!profileMode && <Content callback={GoToProfile} />}
-      {profileMode && project && <ProjectProfile project={project} />}
+      {profileMode && project && (
+        <ProjectProfile project={project} callback={setProfileMode} />
+      )}
     </div>
   );
 }

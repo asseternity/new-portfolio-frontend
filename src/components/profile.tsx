@@ -3,9 +3,10 @@ import type { Project } from '@/lib/project';
 
 type ProjectProps = {
   project: Project;
+  callback: Function;
 };
 
-const ProjectProfile = ({ project }: ProjectProps) => {
+const ProjectProfile = ({ project, callback }: ProjectProps) => {
   return (
     <section className="flex-1 p-5">
       <div className="container w-full h-full grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
@@ -14,7 +15,7 @@ const ProjectProfile = ({ project }: ProjectProps) => {
             {project.name}
           </h1>
           <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
-            {project.description}
+            {project.fullDescription}
           </p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
             <Button asChild className="w-full sm:w-auto">
@@ -22,6 +23,14 @@ const ProjectProfile = ({ project }: ProjectProps) => {
             </Button>
             <Button asChild variant="outline">
               <a href={project.githubLink}>GitHub</a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="bg-transparent border-gray-400"
+              onClick={() => callback(false)}
+            >
+              <a>Back</a>
             </Button>
           </div>
         </div>

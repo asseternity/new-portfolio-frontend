@@ -1,6 +1,7 @@
 export type Project = {
   name: string;
-  description: string;
+  briefDescription: string;
+  fullDescription: string;
   frontendLink: string;
   demoLink: string;
   githubLink: string;
