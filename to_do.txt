@@ -4,6 +4,7 @@
 [v] bring back the dragon game but animate its opening and closing
 [v] push to GH pages to check mobile
 [v] animate closing and opening of the dragon game
+[_] colors
 [_] responsive
 [_] finalize
 [_] final content for projects and about

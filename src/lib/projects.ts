@@ -45,6 +45,6 @@ export const projects: Project[] = [
     githubLink: 'N/A',
     demoLink: 'N/A',
     screenshotPath: placeholder,
-    tags: ['C#', 'TypeScript'],
+    tags: ['Python', 'TypeScript'],
   },
 ];

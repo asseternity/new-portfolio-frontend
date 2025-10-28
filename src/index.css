@@ -45,6 +45,7 @@ html,
 body,
 #root {
   height: 100%;
+  background-color: #efefef;
 }
 
 :root {
@@ -196,4 +197,36 @@ body,
 .small_yellow_text:hover {
   color: white;
   border: 1px solid white;
+}
+
+/* Transparent scrollbar background */
+*::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+/* Transparent track */
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Thumb (default) */
+*::-webkit-scrollbar-thumb {
+  background-color: #808080; /* medium gray */
+  border-radius: 10px;
+}
+
+/* Thumb on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #666666; /* darker gray */
+}
+
+/* Thumb while actively dragging */
+*::-webkit-scrollbar-thumb:active {
+  background-color: #000000; /* black */
+}
+
+/* Optional for Firefox */
+* {
+  scrollbar-color: #808080 transparent; /* thumb | track */
 }

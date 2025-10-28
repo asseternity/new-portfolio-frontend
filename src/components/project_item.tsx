@@ -16,13 +16,18 @@ type ProjectProps = {
 export function ProjectItem({ project, callback }: ProjectProps) {
   return (
     <div className="flex-1">
-      <Item variant="outline">
+      <Item variant="outline" className="border-black">
         <ItemContent>
           <ItemTitle>{project.name}</ItemTitle>
           <ItemDescription>{project.description}</ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm" onClick={() => callback(project)}>
+          <Button
+            variant="outline"
+            className="bg-transparent border-black"
+            size="sm"
+            onClick={() => callback(project)}
+          >
             Read more
           </Button>
         </ItemActions>

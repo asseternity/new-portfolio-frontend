@@ -15,10 +15,10 @@ function Header() {
       <h1 className="text-4xl">Asset Nakupov</h1>
       <p className="text-xs">Middle Full-Stack TypeScript Developer</p>
       <div className="flex flex-row gap-2 justify-center">
-        <div className="text-xs border px-3 py-1 rounded-full">
+        <div className="text-xs border border-black px-3 py-1 rounded-full">
           React · Node.js · PostgreSQL · Prisma · Vitest · Docker
         </div>
-        <div className="text-xs border px-3 py-1 rounded-full">
+        <div className="text-xs border border-black px-3 py-1 rounded-full">
           IELTS 8.5 · Tbilisi, Georgia · Open to remote and relocation
         </div>
       </div>

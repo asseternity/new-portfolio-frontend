@@ -351,7 +351,10 @@ export default function Stack({ callback }: FunctionProps) {
           </div>
         </div>
       </div>
-      <h2 className="text-xl mx-5">Portfolio Projects</h2>
+      <div className="projects w-full px-5 flex flex-col gap-2">
+        <Separator orientation="horizontal" />
+        <h2 className="text-xl">Portfolio Projects</h2>
+      </div>
       <div className="projects w-full p-5 flex flex-col gap-2">
         {shownProjects?.map((x) => (
           <ProjectItem project={x} callback={callback} key={x.name} />
