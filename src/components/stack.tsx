@@ -5,6 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from './ui/tooltip';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { Button } from './ui/button';
 import { ProjectItem } from './project_item';
@@ -32,6 +33,7 @@ import {
   SiBlender,
 } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
+import About from './about';
 
 type FunctionProps = {
   callback: Function;
@@ -139,14 +141,37 @@ export default function Stack({ callback }: FunctionProps) {
 
   return (
     <TooltipProvider>
+      <div className="projects w-full px-5 flex flex-col">
+        <div className="flex flex-row items-center">
+          <h2 className="text-2xl w-30">About me</h2>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="outline"
+                className="bg-black text-white text-xs w-16 h-9"
+              >
+                Show
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <About />
+            </SheetContent>
+          </Sheet>
+        </div>
+        <Separator orientation="horizontal" className="my-5" />
+      </div>
       <div className="flex flex-row">
-        <h2 className="text-xl mx-5">Skills</h2>
-        <Button size="sm" className="h-7 px-2 text-xs" onClick={toggleAll}>
+        <h2 className="text-2xl ml-5 w-30">Skills</h2>
+        <Button
+          size="sm"
+          className="w-16 h-9 text-xs hover:bg-white hover:text-black"
+          onClick={toggleAll}
+        >
           {activatedIcons.length > 0 ? 'Hide all' : 'Select all'}
         </Button>
       </div>
-      <p className="text-xs text-gray-500 mt-2 mx-5">
-        Click to filter the projects
+      <p className="text-xs text-gray-700 italic mt-2 mx-5">
+        Click the icons to filter the projects by skill
       </p>
       <div className="p-6 space-y-4 [--label:5rem] sm:[--label:8rem] md:[--label:11rem] lg:[--label:13rem]">
         <Separator orientation="horizontal" />
@@ -353,7 +378,7 @@ export default function Stack({ callback }: FunctionProps) {
       </div>
       <div className="projects w-full px-5 flex flex-col gap-2">
         <Separator orientation="horizontal" />
-        <h2 className="text-xl">Portfolio Projects</h2>
+        <h2 className="text-2xl">Portfolio Projects</h2>
       </div>
       <div className="projects w-full p-5 flex flex-col gap-2">
         {shownProjects?.map((x) => (

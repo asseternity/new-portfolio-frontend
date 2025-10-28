@@ -6,8 +6,12 @@
 [v] animate closing and opening of the dragon game
 [v] colors
 [v] responsive
-[_] finalize
-[_] final content for projects and about
+[v] finalize
+[v] about me into a sheet
+[v] animate transition to "profile" and back
+[v] final content for projects and about
+[v] make profiles more appealing on the list
+[v] profile descriptions via markdown parser
+[_] add up to three screenshots, store them as an array in projects, then loop through them, showing all up to down
 [_] hook up metrics
 [_] push to assetn.dev
-[_] switch backend to TS

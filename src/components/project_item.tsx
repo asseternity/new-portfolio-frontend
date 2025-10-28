@@ -18,7 +18,10 @@ export function ProjectItem({ project, callback }: ProjectProps) {
     <div className="flex-1">
       <Item variant="outline" className="border-black">
         <ItemContent>
-          <ItemTitle>{project.name}</ItemTitle>
+          <ItemTitle className="text-lg">{project.name}</ItemTitle>
+          <ItemTitle className="text-gray-500 italic">
+            {project.subtitle}
+          </ItemTitle>
           <ItemDescription>{project.briefDescription}</ItemDescription>
         </ItemContent>
         <ItemActions>
