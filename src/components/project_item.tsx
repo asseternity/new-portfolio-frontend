@@ -24,7 +24,7 @@ export function ProjectItem({ project, callback }: ProjectProps) {
         <ItemActions>
           <Button
             variant="outline"
-            className="bg-transparent border-black"
+            className="bg-transparent border-gray-400 w-14 h-12 md:w-auto md:h-8 text-sm whitespace-normal"
             size="sm"
             onClick={() => callback(project)}
           >

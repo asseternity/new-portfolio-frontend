@@ -148,7 +148,7 @@ export default function Stack({ callback }: FunctionProps) {
       <p className="text-xs text-gray-500 mt-2 mx-5">
         Click to filter the projects
       </p>
-      <div className="p-6 space-y-4 [--label:7rem] sm:[--label:9rem] md:[--label:11rem] lg:[--label:13rem]">
+      <div className="p-6 space-y-4 [--label:5rem] sm:[--label:8rem] md:[--label:11rem] lg:[--label:13rem]">
         <Separator orientation="horizontal" />
         <div className={rowCls}>
           <h2 className="text-md md:text-lg font-semibold tracking-tight">
