@@ -5,6 +5,6 @@ export type Project = {
   fullDescription: string;
   demoLink: string;
   githubLink: string;
-  screenshotPath?: string;
+  screenshotPaths?: string[];
   tags: string[];
 };

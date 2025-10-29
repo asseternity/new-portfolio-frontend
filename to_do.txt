@@ -12,6 +12,8 @@
 [v] final content for projects and about
 [v] make profiles more appealing on the list
 [v] profile descriptions via markdown parser
-[_] add up to three screenshots, store them as an array in projects, then loop through them, showing all up to down
-[_] hook up metrics
-[_] push to assetn.dev
+[v] add up to three screenshots, store them as an array in projects, then loop through them, showing all up to down
+[v] finish the about section - pretty!
+[v] check the about section on mobile
+[v] hook up metrics
+

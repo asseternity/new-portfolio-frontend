@@ -4,6 +4,17 @@ import remarkGfm from 'remark-gfm';
 import { Button } from '@/components/ui/button';
 import type { Project } from '@/lib/project';
 
+const LoungeIncrement = async () => {
+  const res = await fetch(
+    'https://personal-website-backend-production-c5a6.up.railway.app/api/metrics/lounge',
+    {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+  if (!res.ok) throw new Error(`Server error: ${res.status}`);
+};
+
 type ProjectProps = {
   project: Project;
   callback: Function;
@@ -22,7 +33,7 @@ const ProjectProfile = ({ project, callback }: ProjectProps) => {
   return (
     <section className="flex-1 p-5">
       <div className="container w-full h-full grid items-center gap-10 lg:grid-cols-2 lg:gap-20 p-5">
-        <div className="mx-auto flex flex-col items-center text-center md:ml-auto lg:max-w-3xl lg:items-start lg:text-left">
+        <div className="mx-auto flex flex-col items-center md:ml-auto lg:max-w-3xl lg:items-start text-left">
           <h1 className="my-6 text-4xl font-bold lg:text-6xl xl:text-7xl">
             {project.name}
           </h1>
@@ -58,21 +69,24 @@ const ProjectProfile = ({ project, callback }: ProjectProps) => {
           </div>
         </div>
         <div className="flex flex-col gap-5 h-full w-full justify-top">
-          <img
+          {project.screenshotPaths?.map((screenshotPath) => {
+            return <img
             src={
-              project.screenshotPath ||
+              screenshotPath ||
               'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg'
             }
+            key={`img_${screenshotPath}`}
             alt="project screenshot"
             className="max-h-600px object-contain"
           />
+          })}
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-            <Button asChild className="w-full sm:w-auto">
+            <Button asChild className="w-full sm:w-auto" onClick={LoungeIncrement}>
               <a target="_blank" href={project.demoLink}>
                 Live Demo
               </a>
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" onClick={LoungeIncrement}>
               <a target="_blank" href={project.githubLink}>
                 GitHub
               </a>

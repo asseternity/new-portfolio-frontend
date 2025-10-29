@@ -7,6 +7,39 @@ import { Button } from './ui/button';
 import dragon_icon from '/dragon-svgrepo-com.svg';
 import PhaserGame from '@/lib/phaser';
 
+const LIincrement = async () => {
+  const res = await fetch(
+    'https://personal-website-backend-production-c5a6.up.railway.app/api/metrics/li',
+    {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+  if (!res.ok) throw new Error(`Server error: ${res.status}`);
+};
+
+const GHincrement = async () => {
+  const res = await fetch(
+    'https://personal-website-backend-production-c5a6.up.railway.app/api/metrics/gh',
+    {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+  if (!res.ok) throw new Error(`Server error: ${res.status}`);
+};
+
+const CVincrement = async () => {
+  const res = await fetch(
+    'https://personal-website-backend-production-c5a6.up.railway.app/api/metrics/cv',
+    {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+  if (!res.ok) throw new Error(`Server error: ${res.status}`);
+};
+
 function Header() {
   const [gameHidden, setGameHidden] = useState<boolean>(true);
 
@@ -24,17 +57,25 @@ function Header() {
       </div>
 
       <div className="flex flex-row gap-3">
-        <Button className="h-9 w-9">
-          <CiLinkedin />
+        <Button className="h-9 w-9" onClick={LIincrement}>
+          <a target="_blank" href="">
+            <CiLinkedin />
+          </a>
         </Button>
-        <Button className="h-9 w-9">
-          <FaGithub />
+        <Button className="h-9 w-9" onClick={GHincrement}>
+          <a target="_blank" href="">
+            <FaGithub />
+          </a>
         </Button>
-        <Button className="h-9 w-9">
-          <PiReadCvLogo />
+        <Button className="h-9 w-9" onClick={CVincrement}>
+          <a target="_blank" href="">
+            <PiReadCvLogo />
+          </a>
         </Button>
-        <Button className="h-9 w-9">
-          <MdOutlineMail />
+        <Button className="h-9 w-9" onClick={CVincrement}>
+          <a target="_blank" href="">
+            <MdOutlineMail />
+          </a>
         </Button>
         <Button
           className="h-9 w-9 p-1 bg-green-800"

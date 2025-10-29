@@ -1,8 +1,16 @@
 import soleira from '/screenshots/social_media.png';
+import soleira2 from '/screenshots/social_media_2.png';
+import soleira3 from '/screenshots/social_media_3.png';
 import viva from '/screenshots/newsletter.png';
+import viva2 from '/screenshots/newsletter_2.png';
 import review from '/screenshots/reviews.png';
+import review2 from '/screenshots/reviews_2.png';
 import resume from '/screenshots/resume.png';
+import resume2 from '/screenshots/resume_2.png';
+import resume3 from '/screenshots/resume_3.png';
 import happy from '/screenshots/happy.png';
+import happy2 from '/screenshots/happy_2.png';
+import happy3 from '/screenshots/happy_3.png';
 import matcha from '/screenshots/matcha.png';
 import dndbot from '/screenshots/dndbot.png';
 import type { Project } from './project';
@@ -16,7 +24,7 @@ export const projects: Project[] = [
     fullDescription: '/new-portfolio-frontend/markdown/soleira.md',
     githubLink: 'https://github.com/asseternity/messenger-frontend',
     demoLink: 'https://asseternity.github.io/messenger-frontend/',
-    screenshotPath: soleira,
+    screenshotPaths: [soleira, soleira2, soleira3],
     tags: [
       'TypeScript',
       'JavaScript',
@@ -45,7 +53,7 @@ export const projects: Project[] = [
     fullDescription: '/new-portfolio-frontend/markdown/viva.md',
     githubLink: 'https://github.com/asseternity/c5-personal-react',
     demoLink: 'https://asseternity.github.io/c5-personal-react/',
-    screenshotPath: viva,
+    screenshotPaths: [viva, viva2],
     tags: [
       'TypeScript',
       'JavaScript',
@@ -74,7 +82,7 @@ export const projects: Project[] = [
     fullDescription: '/new-portfolio-frontend/markdown/happy.md',
     githubLink: 'https://github.com/asseternity/what_makes_lands_happy',
     demoLink: 'https://asseternity.github.io/what_makes_lands_happy/',
-    screenshotPath: happy,
+    screenshotPaths: [happy, happy2, happy3],
     tags: [
       'TypeScript',
       'JavaScript',
@@ -102,7 +110,7 @@ export const projects: Project[] = [
     githubLink:
       'https://github.com/asseternity/matcha-updater?tab=readme-ov-file#link-matchamanbot',
     demoLink: 'https://t.me/MatchaManBot',
-    screenshotPath: matcha,
+    screenshotPaths: [matcha],
     tags: [
       'TypeScript',
       'JavaScript',
@@ -125,7 +133,7 @@ export const projects: Project[] = [
     fullDescription: '/new-portfolio-frontend/markdown/dndbot.md',
     githubLink: 'https://github.com/asseternity/dnd-witch-backend',
     demoLink: 'https://t.me/DnDWitchBot',
-    screenshotPath: dndbot,
+    screenshotPaths: [dndbot],
     tags: [
       'REST APIs',
       'TDD',
@@ -150,8 +158,8 @@ export const projects: Project[] = [
     fullDescription: '/new-portfolio-frontend/markdown/review.md',
     githubLink: 'https://github.com/asseternity/predictive_data_science',
     demoLink:
-      'ttps://www.kaggle.com/code/assetn/video-game-review-score-predictor',
-    screenshotPath: review,
+      'https://www.kaggle.com/code/assetn/video-game-review-score-predictor',
+    screenshotPaths: [review, review2],
     tags: ['SQL', 'PostgreSQL', 'Git', 'CI/CD', 'Python', 'pandas', 'XGBoost'],
   },
   {
@@ -162,7 +170,7 @@ export const projects: Project[] = [
     fullDescription: '/new-portfolio-frontend/markdown/resume.md',
     githubLink: 'https://github.com/asseternity/resume_data_analysis',
     demoLink: 'https://www.kaggle.com/code/assetn/resume-dataset-analysis',
-    screenshotPath: resume,
+    screenshotPaths: [resume, resume2, resume3],
     tags: ['SQL', 'PostgreSQL', 'Git', 'CI/CD', 'Python', 'pandas', 'XGBoost'],
   },
 ];
