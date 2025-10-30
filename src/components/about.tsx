@@ -1,7 +1,7 @@
 function About() {
   return (
-    <div className="p-3 text-gray-800 leading-relaxed">
-      <h1 className="text-3xl mt-0 font-bold mb-2 text-indigo-600">About Me</h1>
+    <div className="p-3 text-gray-800 leading-relaxed overflow-y-auto">
+      <h1 className="text-xl mt-0 font-bold mb-2 text-indigo-600">About Me</h1>
       <div className="text-sm">
         I build{' '}
         <span className="font-semibold">
@@ -22,7 +22,7 @@ function About() {
         ecosystem.
       </div>
 
-      <h1 className="text-3xl font-bold mt-4 mb-2 text-indigo-600">
+      <h1 className="text-xl font-bold mt-4 mb-2 text-indigo-600">
         Accomplishments
       </h1>
       <ul className="list-disc list-outside ml-5 space-y-2 text-sm">
@@ -55,7 +55,7 @@ function About() {
         </li>
       </ul>
 
-      <h1 className="text-3xl font-bold mt-4 mb-2 text-indigo-600">
+      <h1 className="text-xl font-bold mt-4 mb-2 text-indigo-600">
         Background
       </h1>
       <div className="text-sm">
