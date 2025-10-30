@@ -21,7 +21,7 @@ export const projects: Project[] = [
     subtitle: 'Full-Stack Social Platform',
     briefDescription:
       'Full production social platform with user auth, real-time messaging (1000s of messages), notifications, and content management. Demonstrates database architecture, security, and scalable API design.',
-    fullDescription: '/new-portfolio-frontend/markdown/soleira.md',
+    fullDescription: '/markdown/soleira.md',
     githubLink: 'https://github.com/asseternity/messenger-frontend',
     demoLink: 'https://asseternity.github.io/messenger-frontend/',
     screenshotPaths: [soleira, soleira2, soleira3],
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     subtitle: 'Blog / Newsletter CMS',
     briefDescription:
       'Dual-frontend system (public + admin) featuring authentication, CRUD operations, and dynamic content workflows. Emphasizes maintainability and modular patterns.',
-    fullDescription: '/new-portfolio-frontend/markdown/viva.md',
+    fullDescription: '/markdown/viva.md',
     githubLink: 'https://github.com/asseternity/c5-personal-react',
     demoLink: 'https://asseternity.github.io/c5-personal-react/',
     screenshotPaths: [viva, viva2],
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     subtitle: 'Full-Stack Web App For Data Visualization + Analytics',
     briefDescription:
       'Integrates 18 global datasets through a Python data pipeline, exporting cleaned JSON to a TypeScript visualization app. Bridges frontend data viz with backend analytics.',
-    fullDescription: '/new-portfolio-frontend/markdown/happy.md',
+    fullDescription: '/markdown/happy.md',
     githubLink: 'https://github.com/asseternity/what_makes_lands_happy',
     demoLink: 'https://asseternity.github.io/what_makes_lands_happy/',
     screenshotPaths: [happy, happy2, happy3],
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     subtitle: '',
     briefDescription:
       'Automated scraper bot monitoring matcha storefronts, featuring scheduling and command-driven interface. Demonstrates integrations and automation.',
-    fullDescription: '/new-portfolio-frontend/markdown/matcha.md',
+    fullDescription: '/markdown/matcha.md',
     githubLink:
       'https://github.com/asseternity/matcha-updater?tab=readme-ov-file#link-matchamanbot',
     demoLink: 'https://t.me/MatchaManBot',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     subtitle: '',
     briefDescription:
       'Fantasy-themed bot built as a Dockerized ASP.NET service; shows .NET and deployment proficiency.',
-    fullDescription: '/new-portfolio-frontend/markdown/dndbot.md',
+    fullDescription: '/markdown/dndbot.md',
     githubLink: 'https://github.com/asseternity/dnd-witch-backend',
     demoLink: 'https://t.me/DnDWitchBot',
     screenshotPaths: [dndbot],
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     subtitle: '',
     briefDescription:
       'End-to-end ML pipeline predicting IGN review scores using scraped and enriched metadata. Highlights data preprocessing and model evaluation.',
-    fullDescription: '/new-portfolio-frontend/markdown/review.md',
+    fullDescription: '/markdown/review.md',
     githubLink: 'https://github.com/asseternity/predictive_data_science',
     demoLink:
       'https://www.kaggle.com/code/assetn/video-game-review-score-predictor',
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     subtitle: '',
     briefDescription:
       'Exploratory analysis of 54 000 resumes to map career transitions from law to tech. Demonstrates SQL-Python integration and visualization.',
-    fullDescription: '/new-portfolio-frontend/markdown/resume.md',
+    fullDescription: '/markdown/resume.md',
     githubLink: 'https://github.com/asseternity/resume_data_analysis',
     demoLink: 'https://www.kaggle.com/code/assetn/resume-dataset-analysis',
     screenshotPaths: [resume, resume2, resume3],

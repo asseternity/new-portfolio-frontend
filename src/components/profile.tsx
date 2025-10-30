@@ -70,18 +70,24 @@ const ProjectProfile = ({ project, callback }: ProjectProps) => {
         </div>
         <div className="flex flex-col gap-5 h-full w-full justify-top">
           {project.screenshotPaths?.map((screenshotPath) => {
-            return <img
-            src={
-              screenshotPath ||
-              'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg'
-            }
-            key={`img_${screenshotPath}`}
-            alt="project screenshot"
-            className="max-h-600px object-contain"
-          />
+            return (
+              <img
+                src={
+                  screenshotPath ||
+                  'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg'
+                }
+                key={`img_${screenshotPath}`}
+                alt="project screenshot"
+                className="max-h-600px object-contain"
+              />
+            );
           })}
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-            <Button asChild className="w-full sm:w-auto" onClick={LoungeIncrement}>
+            <Button
+              asChild
+              className="w-full sm:w-auto"
+              onClick={LoungeIncrement}
+            >
               <a target="_blank" href={project.demoLink}>
                 Live Demo
               </a>
@@ -94,7 +100,10 @@ const ProjectProfile = ({ project, callback }: ProjectProps) => {
             <Button
               variant="outline"
               className="bg-transparent border-gray-400"
-              onClick={() => callback(false)}
+              onClick={() => {
+                callback(false);
+                window.history.pushState({}, '', '/');
+              }}
             >
               Back
             </Button>
