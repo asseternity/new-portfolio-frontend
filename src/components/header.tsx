@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { CiLinkedin } from 'react-icons/ci';
 import { FaGithub } from 'react-icons/fa';
-import { PiReadCvLogo } from 'react-icons/pi';
 import { MdOutlineMail } from 'react-icons/md';
 import { Button } from './ui/button';
 import dragon_icon from '/dragon-svgrepo-com.svg';
+import cv_icon from '/cv.svg';
 import PhaserGame from '@/lib/phaser';
 
 const LIincrement = async () => {
@@ -58,22 +58,25 @@ function Header() {
 
       <div className="flex flex-row gap-3">
         <Button className="h-9 w-9" onClick={LIincrement}>
-          <a target="_blank" href="">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/asset-nakupov-b705bab7/"
+          >
             <CiLinkedin />
           </a>
         </Button>
         <Button className="h-9 w-9" onClick={GHincrement}>
-          <a target="_blank" href="">
+          <a target="_blank" href="https://github.com/asseternity">
             <FaGithub />
           </a>
         </Button>
-        <Button className="h-9 w-9" onClick={CVincrement}>
-          <a target="_blank" href="">
-            <PiReadCvLogo />
+        <Button className="h-9 w-9 p-1" onClick={CVincrement}>
+          <a href="/cv.pdf" download>
+            <img src={cv_icon} className="w-full h-full" />
           </a>
         </Button>
         <Button className="h-9 w-9" onClick={CVincrement}>
-          <a target="_blank" href="">
+          <a target="_blank" href="mailto:asset_n@proton.me">
             <MdOutlineMail />
           </a>
         </Button>
