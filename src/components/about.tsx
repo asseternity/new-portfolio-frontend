@@ -10,7 +10,7 @@ function About() {
         <span className="font-medium">API design</span>,{' '}
         <span className="font-medium">data modeling</span>,{' '}
         <span className="font-medium">auth & security</span>,{' '}
-        <span className="font-medium">testing (Vitest/TDD</span>), and{' '}
+        <span className="font-medium">testing (Vitest/TDD)</span>, and{' '}
         <span className="font-medium">CI/CD</span>. I enjoy designing systems
         that are <span className="font-semibold">easy to extend</span>,{' '}
         <span className="font-semibold">reason about</span>, and{' '}
