@@ -1,6 +1,6 @@
 ## Summary
 
-Full-stack social platform with authenticated profiles, messaging, posts, comments, likes, and notifications. Built to demonstrate production patterns in a TypeScript/Node ecosystem.
+Full-stack social platform with authenticated profiles, messaging (1000s of messages), posts, comments, likes, and notifications. Built to demonstrate production patterns in a TypeScript/Node ecosystem.
 
 ## Tech
 

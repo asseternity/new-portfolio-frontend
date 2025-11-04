@@ -3,20 +3,16 @@ function About() {
     <div className="p-3 text-gray-800 leading-relaxed overflow-y-auto">
       <h1 className="text-xl mt-0 font-bold mb-2 text-indigo-600">About Me</h1>
       <div className="text-sm">
-        I build{' '}
-        <span className="font-semibold">
-          scalable, production-ready web applications
-        </span>{' '}
-        and integrations with{' '}
-        <span className="font-semibold text-gray-900">structured thinking</span>
-        . I own the full lifecycle —{' '}
-        <span className="text-indigo-700 font-medium">API design</span>,{' '}
-        <span className="text-indigo-700 font-medium">data modeling</span>,{' '}
-        <span className="text-indigo-700 font-medium">auth & security</span>,
-        testing (<span className="italic">Vitest/TDD</span>), and{' '}
-        <span className="text-indigo-700 font-medium">CI/CD</span>. I enjoy
-        designing systems that are{' '}
-        <span className="font-semibold">easy to extend</span>,{' '}
+        I built <span className="font-semibold text-indigo-700 ">7+</span>{' '}
+        scalable, production-ready web applications and integrations with{' '}
+        <span className="font-semibold text-indigo-700 ">1,000s</span> of
+        messages, using structured thinking. I own the full lifecycle —{' '}
+        <span className="font-medium">API design</span>,{' '}
+        <span className="font-medium">data modeling</span>,{' '}
+        <span className="font-medium">auth & security</span>, testing (
+        <span className="italic">Vitest/TDD</span>), and{' '}
+        <span className="font-medium">CI/CD</span>. I enjoy designing systems
+        that are <span className="font-semibold">easy to extend</span>,{' '}
         <span className="font-semibold">reason about</span>, and{' '}
         <span className="font-semibold">scale</span> across the full TypeScript
         ecosystem.

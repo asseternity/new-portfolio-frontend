@@ -46,7 +46,7 @@ function Header() {
   return (
     <div className="header w-full flex flex-col justify-center items-center gap-3 px-5 text-center">
       <h1 className="text-4xl">Asset Nakupov</h1>
-      <p className="text-xs">Middle Full-Stack TypeScript Developer</p>
+      <p className="text-xs">Full-Stack TypeScript Developer</p>
       <div className="flex flex-row gap-2 justify-center">
         <div className="text-xs border border-black px-3 py-1 rounded-full">
           React · Node.js · PostgreSQL · Prisma · Vitest · Docker
