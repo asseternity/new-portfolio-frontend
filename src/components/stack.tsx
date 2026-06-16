@@ -197,6 +197,23 @@ export default function Stack({ callback }: FunctionProps) {
               Icon={SiNodedotjs}
               active={isActive('Node.js')}
               onToggle={toggle}
+            />            
+            <Item
+              name="C#"
+              Icon={TbBrandCSharp}
+              active={isActive('C#')}
+              onToggle={toggle}
+            />
+            <Item
+              name=".NET"
+              Icon={SiDotnet}
+              active={isActive('.NET')}
+              onToggle={toggle}
+            />
+            <Item
+              name="ASP.NET"
+              active={isActive('ASP.NET')}
+              onToggle={toggle}
             />
           </div>
         </div>
@@ -329,23 +346,6 @@ export default function Stack({ callback }: FunctionProps) {
             <Item
               name="XGBoost"
               active={isActive('XGBoost')}
-              onToggle={toggle}
-            />
-            <Item
-              name="C#"
-              Icon={TbBrandCSharp}
-              active={isActive('C#')}
-              onToggle={toggle}
-            />
-            <Item
-              name=".NET"
-              Icon={SiDotnet}
-              active={isActive('.NET')}
-              onToggle={toggle}
-            />
-            <Item
-              name="ASP.NET"
-              active={isActive('ASP.NET')}
               onToggle={toggle}
             />
             <Item
